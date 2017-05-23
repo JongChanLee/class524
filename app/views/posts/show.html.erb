@@ -1,0 +1,9 @@
+<a href="/posts/index" >돌아가기</a>
+
+
+<h3><%= @post.title %></h3>
+<br>
+글쓴이 : <%= @post.user.email %>
+
+<a href="/posts/edit/<%= @post.id %>"> 수정하기 </a><br>
+<a href="/posts/destroy/<%= @post.id %>" data-confirm="삭제하시겠습니까?" data-method="post"> 삭제하기 </a><br>

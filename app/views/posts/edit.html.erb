@@ -1,0 +1,10 @@
+<h2>수정하기</h2>
+
+<form action="/posts/update/<%= @post.id %>" method="POST">
+    제목 <input type="text" name="title" value="<%= @post.title %>" > 
+    <br>
+    
+    <input type="submit" value="제출">
+</form>
+
+<a href="/posts/index">목록으로 돌아가기</a>

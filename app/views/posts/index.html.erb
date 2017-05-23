@@ -1,0 +1,16 @@
+<% if user_signed_in? %>
+    현재 유저 : <%= current_user.email %> <br>
+    <a href="/users/sign_out">로그아웃</a>
+<% else %>
+    <a href="/users/sign_in">로그인</a>
+    <a href="/users/sign_up">회원가입</a>
+<% end %>
+
+
+<h2>글 목록 페이지</h2>
+
+<% @posts.each do |post| %>
+    <a href="/posts/show/<%= post.id %>"><%= post.title %></a> | <%= post.user.email %><br>
+<% end %>
+
+<a href="/posts/new" >글쓰러 가기</a>
